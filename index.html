@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <!-- Rating state start -->
+      <section class="section__card">
+        <section class="rating">
+          <div class="circle__container">
+            <img class="rating__icon" src="./images/icon-star.svg" alt="" />
+          </div>
+          <h1 class="heading">How did we do?</h1>
+          <p class="description">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <form id="form_rating" method="post">
+            <div class="rating__numbers">
+              <div class="circle__container">
+                <input
+                  id="rating1"
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  class="rating__input"
+                />
+                <label for="rating1" class="rating__label">1</label>
+              </div>
+              <div class="circle__container">
+                <input
+                  id="rating2"
+                  type="radio"
+                  name="rating"
+                  value="2"
+                  class="rating__input"
+                />
+                <label for="rating2" class="rating__label">2</label>
+              </div>
+              <div class="circle__container">
+                <input
+                  id="rating3"
+                  type="radio"
+                  name="rating"
+                  value="3"
+                  class="rating__input"
+                />
+                <label for="rating3" class="rating__label">3</label>
+              </div>
+              <div class="circle__container">
+                <input
+                  id="rating4"
+                  type="radio"
+                  name="rating"
+                  value="4"
+                  class="rating__input"
+                />
+                <label for="rating4" class="rating__label">4</label>
+              </div>
+              <div class="circle__container">
+                <input
+                  id="rating5"
+                  type="radio"
+                  name="rating"
+                  value="5"
+                  class="rating__input"
+                />
+                <label for="rating5" class="rating__label">5</label>
+              </div>
+            </div>
+            <button id="submitBtn" class="btn btn--orange" type="submit">
+              Submit
+            </button>
+          </form>
+        </section>
+        <!-- Thank you state start -->
+        <section class="thanks">
+          <img
+            class="thanks__image"
+            src="./images/illustration-thank-you.svg"
+            alt="Thank you image"
+          />
+          <div class="thanks__rating">
+            <span class="thanks__rating__label">
+              You selected <span id="calification_selected"></span> out of 5
+            </span>
+          </div>
+          <!-- Add rating here -->
+          <h1 class="heading">Thank you!</h1>
+          <p class="description">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </section>
+        <!-- Thank you state end -->
+      </section>
+      <!-- Rating state end -->
+      <footer class="attribution">
+        <p>
+          Challenge by<a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Juan</a>.
+        </p>
+      </footer>
+    </main>
+    <script src="./interaction.js"></script>
+  </body>
+</html>
