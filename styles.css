@@ -1,13 +1,15 @@
 html {
   font-size: 15px;
-  height: 100vh;
 }
 
 body {
   font-family: "Overpass", sans-serif;
   background: hsl(216, 12%, 8%);
   color: hsl(0, 0%, 100%);
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -15,7 +17,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
   padding: 1em;
 }
 
@@ -28,6 +29,23 @@ main {
   justify-content: center;
   align-items: center;
   color: hsl(217, 12%, 63%);
+}
+
+.input__container {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: hsla(216, 12%, 54%, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(217, 12%, 63%);
+}
+
+.input__container:hover {
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
 }
 
 .rating {
@@ -46,11 +64,6 @@ main {
   color: inherit;
   cursor: pointer;
 }
-
-/* .rating__input--selected {
-  background: hsl(25, 97%, 53%);
-  color: hsl(0, 0%, 100%);
-} */
 
 .section__card {
   width: 100%;
@@ -81,8 +94,8 @@ main {
   flex-wrap: wrap;
 }
 
-.circle__container:has(input[type="radio"]:checked) {
-  background: hsl(25, 97%, 53%);
+.input__container:has(input[type="radio"]:checked) {
+  background: hsl(217, 12%, 63%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -96,6 +109,11 @@ main {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-top: 1em;
+}
+
+.btn:hover {
+  color: hsl(25, 97%, 53%);
+  background: hsl(0, 20%, 100%);
 }
 
 .btn--orange {
